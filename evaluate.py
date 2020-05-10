@@ -15,9 +15,9 @@ import time
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-from deeplab_resnet import DeepLabResNetModel, ImageReader, prepare_label
+from deeplab_resnet import DeepLabResNetModel, ImageReader
 os.environ["CUDA_VISIBLE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 IMG_MEAN = np.array((104.00698793,116.66876762,122.67891434), dtype=np.float32)
 
 DATA_DIRECTORY = './dataset/VOCdevkit/VOC2012' 
@@ -25,7 +25,7 @@ DATA_LIST_PATH = './dataset/VOCdevkit/data_list/val.txt'
 IGNORE_LABEL = 255
 NUM_CLASSES = 21
 NUM_STEPS = 1449                #test: 1456  #val 1449
-RESTORE_FROM = './restore_model/model.ckpt'
+RESTORE_FROM = './restore_model/model_I_C.ckpt'
 
 def get_arguments():
     """Parse all the arguments provided from the CLI.
