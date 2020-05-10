@@ -1,9 +1,3 @@
-"""Evaluation script for the DeepLab-ResNet network on the validation subset
-   of PASCAL VOC dataset.
-
-This script evaluates the model on 1449 validation images.
-"""
-
 from __future__ import print_function
 
 import argparse
